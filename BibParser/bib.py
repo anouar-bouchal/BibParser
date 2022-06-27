@@ -74,7 +74,7 @@ class BibFile:
             to: str,
             selected_attrs: List[str] = None,
     ):
-        with open(to, 'w') as f:
+        with open(to, 'r') as f:
             for key in self.refs.refs:
                 ref = self.refs.refs[key]
                 f.write('@%s{%s,\n' % (ref.entry, ref.shortname))
